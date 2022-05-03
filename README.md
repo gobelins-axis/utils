@@ -18,13 +18,14 @@ npm i github:arcade-feu/utils
 const { getArduinoBoardPort } = require("utils");
 
 // Using promise
-getArduinoBoardPort().then((port) => {
-    console.log(port);
-});
-
-// Within async function
-const port = await getArduinoBoardPort();
-console.log(port);
+getArduinoBoardPort().then(
+    (port) => {
+        console.log(port);
+    },
+    (error) => {
+        console.log(error);
+    }
+);
 ```
 
 ## Authors

@@ -7,7 +7,10 @@ module.exports = () => {
         console.log('⏳ Looking for arduino board...');
 
         exec('arduino-cli board list', (error, stdout, stderr) => {
-            if (error) reject(Error('❌ Something went wrong while getting board list\n'));
+            if (error) {
+                reject(Error('❌ Something went wrong while getting board list\n'));
+                return;
+            }
 
             const boardList = stdout;
 
@@ -21,7 +24,10 @@ module.exports = () => {
                 return item.includes('Serial Port (USB)');
             });
 
-            if (usbPorts.length === 0) reject(Error('❌ No arduino board was found in the board list\n'));
+            if (usbPorts.length === 0) {
+                reject(Error('❌ No arduino board was found in the board list\n'));
+                return;
+            }
 
             const port = usbPorts[0].split(' ')[0];
 
