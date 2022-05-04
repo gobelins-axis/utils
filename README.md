@@ -2,7 +2,7 @@
 
 ## Description
 
-Some useful functions.
+Some useful functions for arduino + node scripts.
 
 ## Installing
 
