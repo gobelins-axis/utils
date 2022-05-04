@@ -17,11 +17,11 @@ module.exports = () => {
             const lines = boardList.split('\n');
 
             const ports = lines.filter((item) => {
-                return item.includes('Serial Port');
+                return item.includes('serial');
             });
 
             const usbPorts = ports.filter((item) => {
-                return item.includes('Serial Port (USB)');
+                return item.includes('usbserial');
             });
 
             if (usbPorts.length === 0) {
