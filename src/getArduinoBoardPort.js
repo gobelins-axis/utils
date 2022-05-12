@@ -31,7 +31,7 @@ module.exports = () => {
 
             const port = usbPorts[0].split(' ')[0];
 
-            console.log(`✅ Board founded on port ${port}!\n`);
+            console.log(`✅ Board founded on port ${port}\n`);
 
             resolve(port);
         });
