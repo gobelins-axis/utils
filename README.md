@@ -7,7 +7,7 @@ Some useful functions for arduino + node scripts.
 ## Installing
 
 ```bash
-npm i github:arcade-feu/utils
+npm i github:gobelins-axis/utils
 ```
 
 ## Usage
